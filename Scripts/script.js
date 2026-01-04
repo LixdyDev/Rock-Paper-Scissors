@@ -85,6 +85,16 @@ function playGame(round) {
     for(let i = 1; i <= round; i++) {
         playRound(getHumanChoice(),getComputerChoice());
     }
+
+    if (computerScore > humanScore){
+        console.log('You Lose The Game! Try Again');
+    }
+    else if (computerScore < humanScore) {
+        console.log('You Win! Congratulations');
+    }
+    else if(computerScore === humanScore) {
+        console.log('Tie! Play Again');
+    }
 }
 
 playGame(round)
